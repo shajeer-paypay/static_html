@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<body>
+<h3>Url</h3>
+<span>
+    <button onclick="getQuery()">Get Query Params</button>
+</span>
+<h3>
+    UI widget
+</h3>
+
+<input type="hidden" id="hidden_field"/>
+<span>
+    <button onclick="getUiWidgetValue()">UI Widget</button>
+</span>
+
+<h3>Local storage</h3>
+<span>
+    <button onclick="localStorage()">Local storage</button>
+</span>
+
+<h3>Cookie</h3>
+<span>
+    <button onclick="getCookie()">Get Cookies</button>
+</span>
+<br/>
+<br/><br/>
+<div id="result">Result will be shown here</div>
+
+</body>
+<script>
+var resultEle = document.getElementById('result');
+
+    function getCookie() {
+      var theCookies = document.cookie.split(';');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        aString += i + ' ' + theCookies[i-1] + "\n";
+    }
+    console.log(document.cookie)
+    resultEle.innerText = document.cookie;
+}
+
+
+</script>
+</html>
